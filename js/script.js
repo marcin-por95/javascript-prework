@@ -1,3 +1,4 @@
+
 let playerScore = 0;
 let computerScore = 0;
 
@@ -34,23 +35,24 @@ function playGame(playerInput){ // playerInput = 1
     }
     
     clearMessages();
+    let randomNumber = Math.floor(Math.random() * 3 + 1); // 2
 
-    let argPlayerMove = getMoveName(playerInput); // 1 -> 'rock'
+    const argPlayerMove = getMoveName(playerInput); // 1 -> 'rock'
 
     //randomize 
-    let randomNumber = Math.floor(Math.random() * 3 + 1); // 2
-    let argComputerMove = getMoveName(randomNumber); // 2 -> 'paper'
+    
+    const argComputerMove = getMoveName(randomNumber); // 2 -> 'paper'
 
     displayResult(argComputerMove, argPlayerMove);
 }
 
-document.getElementById('play-rock').addEventListener('click', function(){
+const Rock = document.getElementById('play-rock').addEventListener('click', function(){
     playGame(1);
 });
-document.getElementById('play-paper').addEventListener('click', function(){
+const Paper = document.getElementById('play-paper').addEventListener('click', function(){
     playGame(2);;
 });
-document.getElementById('play-scissors').addEventListener('click', function(){
+const scissors = document.getElementById('play-scissors').addEventListener('click', function(){
     playGame(3);;
 });
 
