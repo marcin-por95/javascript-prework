@@ -46,10 +46,10 @@ function playGame(playerInput){ // playerInput = 1
     displayResult(argComputerMove, argPlayerMove);
 }
 
-const Rock = document.getElementById('play-rock').addEventListener('click', function(){
+const rock = document.getElementById('play-rock').addEventListener('click', function(){
     playGame(1);
 });
-const Paper = document.getElementById('play-paper').addEventListener('click', function(){
+const paper = document.getElementById('play-paper').addEventListener('click', function(){
     playGame(2);;
 });
 const scissors = document.getElementById('play-scissors').addEventListener('click', function(){
